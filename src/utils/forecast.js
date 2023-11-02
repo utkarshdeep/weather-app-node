@@ -12,9 +12,9 @@ const forecast = (lat, lon, callback) => {
         } else {
             const current = body.current
 
-            const { temperature, feelslike } = current
+            const { temperature, feelslike, humidity } = current
 
-            callback(undefined, `${current.weather_descriptions[0]}. It is currently ${temperature} degrees out. It feels like ${feelslike} degrees out.`)
+            callback(undefined, `${current.weather_descriptions[0]}. It is currently ${temperature} degrees out. It feels like ${feelslike} degrees out. The humidity is ${humidity}%.`)
         }
 
 
